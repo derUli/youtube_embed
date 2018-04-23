@@ -1,0 +1,11 @@
+{
+	"id": "youtube_embed",
+	"version": "1.0",
+	"description": "Responsive Privacy Youtube Embed",
+	"categories": [
+		"youtube",
+		"video"
+	],
+	"compatible_from": "2018.3",
+	"dependencies" : []
+}
