@@ -10,7 +10,7 @@ class YoutubeEmbed extends MainClass
 
     public function adminFooter()
     {
-        echo $this->frontendFooter();
+        $this->frontendFooter();
     }
 
     public function contentFilter($html)
