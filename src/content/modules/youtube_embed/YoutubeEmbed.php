@@ -26,6 +26,24 @@ class YoutubeEmbed extends MainClass
         }
         return $html;
     }
+	
+	public function thumbnail(){
+		$url = Request::getVar("url");
+		$number = Request::getVar("number") ? Request::getVar("number") : 0;
+		
+		$query = parse_url($url, PHP_URL_QUERY);
+        $args = array();
+        parse_str($query, $args);
+        $videoId = isset($args["v"]) ? $args["v"] : null;
+		$thumbnailUrl = "https://img.youtube.com/vi/{$videoId}/{$number}.jpg";
+
+		$image = file_get_contents_wrapper($thumbnailUrl, false);
+		
+		if(!$image){
+			TextResult("Not Found", HttpStatusCode::NOT_FOUND);
+		}
+		ContentResult($image, HttpStatusCode::OK, "image/jpeg");
+	}
 
     public function getYoutubeEmbedHtml($url)
     {
