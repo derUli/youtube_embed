@@ -37,7 +37,7 @@ class YoutubeEmbed extends MainClass
         $videoId = isset($args["v"]) ? $args["v"] : null;
         $thumbnailUrl = "https://img.youtube.com/vi/{$videoId}/{$number}.jpg";
         
-        $cachedImage = Path::resolve("ULICMS_CACHE/video-{$videoId}.jpg");
+        $cachedImage = Path::resolve("ULICMS_CACHE/" .md5("video-thumb-{$videoId}").".jpg");
         if(is_file($cachedImage)){
 		    Result(file_get_contents($cachedImage), HttpStatusCode::OK, "image/jpeg");
         }
