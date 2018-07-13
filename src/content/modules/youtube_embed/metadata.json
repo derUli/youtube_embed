@@ -4,6 +4,6 @@
 		"YoutubeEmbed": "YoutubeEmbed.php"
 	},
 	"main_class": "YoutubeEmbed",
-	"version": "1.2",
+	"version": "1.0",
 	"embed": false
 }
