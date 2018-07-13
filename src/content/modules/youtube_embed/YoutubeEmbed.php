@@ -22,6 +22,7 @@ class YoutubeEmbed extends MainClass
         if (! $youtube_embed_layout) {
             $youtube_embed_layout = "player";
         }
+        
         preg_match_all("/\[youtube=(.+)]/i", $html, $matches);
         if (count($matches[0]) > 0) {
             for ($i = 0; $i < count($matches[0]); $i ++) {
@@ -64,5 +65,27 @@ class YoutubeEmbed extends MainClass
         }
         ViewBag::set("video_id", $videoId);
         return Template::executeModuleTemplate(self::MODULE_NAME, "{$layout}.php");
+    }
+
+    public function settings()
+    {
+        if (Request::isPost()) {
+            $youtube_embed_layout = Request::getVar("youtube_embed_layout");
+            if (! faster_in_array($youtube_embed_layout, array(
+                "player",
+                "thumbnail"
+            ))) {
+                $youtube_embed_layout = "player";
+            }
+            Settings::set("youtube_embed_layout", $youtube_embed_layout);
+            Request::redirect(ModuleHelper::buildAdminURL(self::MODULE_NAME, "save=1"));
+        }
+        
+        return Template::executeModuleTemplate(self::MODULE_NAME, "settings.php");
+    }
+
+    public function getSettingsHeadline()
+    {
+        return "Youtube Embed";
     }
 }
