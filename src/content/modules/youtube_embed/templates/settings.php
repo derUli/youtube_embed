@@ -29,7 +29,7 @@ if (! $youtube_embed_layout) {
 <p>
 	<img id="preview"
 		src="<?php echo ModuleHelper::buildRessourcePath("youtube_embed", "images/{$youtube_embed_layout}.jpg");?>"
-		alt="<?php translate("preview");?>?>">
+		alt="<?php translate("preview");?>?>" class="img-responsive">
 </p>
 <p>
 	<button type="submit" class="btn btn-primary"><?php translate("save");?></button>
