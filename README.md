@@ -8,6 +8,7 @@ UliCMS Modul - Embeds youtube videos into pages
 * Provides a function to get embed html from an Youtube URL
 * Fully Reponsive
 * Uses Privacy Enhanced Mode
+* Has two layouts (Embedded Player or linked thumbnail image)
 
 ## Examples
 

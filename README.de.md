@@ -8,6 +8,7 @@ UliCMS Modul - Binden Sie Youtube Videos in Seiten ein.
 * Enthält eine Funktion die auf Basis einer Video-URL einen HTML-Code generiert
 * Komplett Reponsive
 * Nutzt den erweiterten Privatsphärenmodus
+* Videos können mit zwei Layouts angezeigt werden (eingebundener Player oder Video Thumbnail-Bild mit Verlinkung)
 
 ## Beispiele
 
