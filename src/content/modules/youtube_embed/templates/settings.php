@@ -32,7 +32,7 @@ if (! $youtube_embed_layout) {
 		alt="<?php translate("preview");?>?>" class="img-responsive">
 </p>
 <p>
-	<button type="submit" class="btn btn-primary"><?php translate("save");?></button>
+	<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> <?php translate("save");?></button>
 </p>
 <?php echo ModuleHelper::endForm()?>
 <?php

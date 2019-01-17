@@ -86,6 +86,6 @@ class YoutubeEmbed extends MainClass
 
     public function getSettingsHeadline()
     {
-        return "Youtube Embed";
+        return '<i class="fab fa-youtube"></i> Youtube Embed';
     }
 }
