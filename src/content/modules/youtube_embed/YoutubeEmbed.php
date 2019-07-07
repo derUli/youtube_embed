@@ -14,6 +14,13 @@ class YoutubeEmbed extends MainClass {
     }
 
     public function contentFilter($html) {
+        // special case for blog module
+        $blog_admin = Request::getVar("blog_admin");
+        if (in_array($blog_admin, [
+                    "edit_post", "add"
+                ])) {
+            return $html;
+        }
         $youtube_embed_layout = Settings::get("youtube_embed_layout", "str");
         if (!$youtube_embed_layout) {
             $youtube_embed_layout = "player";
