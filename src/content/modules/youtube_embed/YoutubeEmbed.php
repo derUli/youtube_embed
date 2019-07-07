@@ -23,7 +23,7 @@ class YoutubeEmbed extends MainClass {
         if (count($matches[0]) > 0) {
             for ($i = 0; $i < count($matches[0]); $i ++) {
                 $replaceCode = $matches[0][$i];
-                $url = $matches[1][$i];
+                $url = strip_tags($matches[1][$i]);
                 $embedCode = $this->getYoutubeEmbedHtml($url, $youtube_embed_layout);
                 $html = str_replace($replaceCode, $embedCode, $html);
             }

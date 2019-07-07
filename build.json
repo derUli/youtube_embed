@@ -1,11 +1,11 @@
 {
-	"id": "youtube_embed",
-	"version": "1.4",
-	"description": "Responsive Privacy Youtube Embed",
-	"categories": [
-		"youtube",
-		"video"
-	],
-	"compatible_from": "2019.1.4",
-	"dependencies" : []
+    "id": "youtube_embed",
+    "version": "1.5",
+    "description": "Responsive Privacy Youtube Embed",
+    "categories": [
+        "youtube",
+        "video"
+    ],
+    "compatible_from": "2019.1.4",
+    "dependencies": []
 }
