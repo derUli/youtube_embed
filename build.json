@@ -1,12 +1,12 @@
 {
     "id": "youtube_embed",
-    "version": "1.5",
+    "version": "1.6",
     "description": "Responsive Privacy Youtube Embed",
     "categories": [
         "youtube",
         "video"
     ],
-    "compatible_from": "2019.1.4",
-    "min_php_version": "7.0",
+    "compatible_from": "2020.2.3",
+    "min_php_version": "7.2",
     "dependencies": []
 }

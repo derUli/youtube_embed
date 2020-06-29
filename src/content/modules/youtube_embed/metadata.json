@@ -4,7 +4,7 @@
         "YoutubeEmbed": "YoutubeEmbed.php"
     },
     "main_class": "YoutubeEmbed",
-    "version": "1.5",
+    "version": "1.6",
     "embed": false,
     "admin_permission": "design"
 }
