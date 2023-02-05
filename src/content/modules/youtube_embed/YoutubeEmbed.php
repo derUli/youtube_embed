@@ -103,7 +103,7 @@ class YoutubeEmbed extends MainClass
     {
         if (Request::isPost()) {
             $youtube_embed_layout = Request::getVar("youtube_embed_layout");
-            if (!faster_in_array($youtube_embed_layout, array(
+            if (!in_array($youtube_embed_layout, array(
                         "player",
                         "thumbnail"
                     ))) {
