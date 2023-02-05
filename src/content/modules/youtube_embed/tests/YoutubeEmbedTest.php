@@ -91,7 +91,7 @@ class YoutubeEmbedTest extends TestCase
             $controller->head();
         });
         $this->assertStringStartsWith(
-            '<link rel="stylesheet" href="content/cache/stylesheets/',
+            '<link rel="stylesheet" href="content/cache/legacy/stylesheets/',
             $output
         );
     }
@@ -103,7 +103,7 @@ class YoutubeEmbedTest extends TestCase
             $controller->adminHead();
         });
         $this->assertStringStartsWith(
-            '<link rel="stylesheet" href="content/cache/stylesheets/',
+            '<link rel="stylesheet" href="content/cache/legacy/stylesheets/',
             $output
         );
     }
